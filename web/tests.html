@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<script src="js/ScriptsMeetingPlanning.js"></script>
+		<script src="js/tests/testInvitado.js"></script>
+		<script src="js/tests/testEvento.js"></script>
+		<script src="js/tests/testGestorCategoria.js"></script>
+		<script src="js/external/jquery-2.1.4.min.js"></script>
+		<title>TEST</title>
+		<style>
+			.false {background-color:red}
+			.true {background-color:lightgreen}
+			
+</style>
+	</head>
+	<body>
+		<header>
+		</header>
+
+		<footer>
+			<div class="content">
+				<span>Hola Mundo</span>
+			</div>
+		</footer>
+
+		<script>
+		$(document).ready(function(){
+			for(var a in TEST){
+				$(".content").append("<div><span>" + a + "</span><div>");
+				var resultados = TEST[a].run();
+				var table = $("<table></table>");
+				
+				$(resultados).each(function(i,e){
+					var tr = $("<tr></tr>");
+					if(e.value){
+						tr.addClass("true")
+					}else{
+						tr.addClass("false")
+					}
+					tr.append("<td style='width:300px'>" + e.name + "</td>")
+					tr.append("<td>" + e.value + "</td>")
+					table.append(tr);
+				});
+				$(".content").append(table)
+			};
+		});
+
+		</script>
+	</body>
+</html>
