@@ -9,36 +9,81 @@ if(TEST == undefined){
 
 
 TEST.Jugador = {
-    setUp: function(){
 
+    setUp: function () {
+        this.jugador = new Jugador("Facundo");
     },
 
-    testJugadorTieneNombre : function(){
-    //tenes que testear que al crear un jugador, SIEMPRE tenga nombre. No construir cun jugador sin nombre o con scring vacio.
+    testJugadorTieneNombre: function () {
+        return (this.jugador.nombre == "Facundo");
+    },
+
+    testJugadorNoTieneNombre: function () {
+        var noHayNombre = false;
+        var nombreVacio = false;
+        nombre = "";
+        try{
+            this.jugador = new Jugador();
+        } catch (e) {
+            if (e instanceof ParametroVacioExeption) {
+                noHayNombre = true;
+            }
+        }
+        try{
+            this.jugador = new Jugador(nombre);
+        } catch (e){
+            if (e instanceof ParametroVacioExeption) {
+                nombreVacio = true;
+            }
+        }
+        return (noHayNombre && nombreVacio);
     },
 
     testAddPuntajeNoExistente : function () {
-        //add puntaje recibe un puntaje y lo agregar a la lista de puntajes. Fijarme que no este agregado, ver el nro de mano
+        this.jugador.agregarPuntaje({nroMano : 1});
+        return this.jugador.puntajes[0].nroMano == 1;
     },
 
     testAddPuntajeExistente : function () {
-        //Con una excepcion de elemento duplicado.
+        this.jugador.puntajes[0]={nroMano : 1};
+        try{
+            this.jugador.agregarPuntaje({nroMano : 1});
+        } catch (e) {
+            if(e instanceof YaExisteElementoExeption && e.detalle==1) {
+                return true;
+            }
+        }
+        return false;
     },
 
     testQuitarPuntajeExistente : function () {
-        //Lo mismo!
+        this.jugador.puntajes[0]={nroMano : 1};
+        this.jugador.puntajes[1]={nroMano : 2};
+        this.jugador.quitarPuntaje({nroMano : 2});
+        return (this.jugador.puntajes.length == 1);
     },
 
     testQuitarPuntajeNoExistente : function () {
-
+        this.jugador.puntajes[0]={nroMano : 1};
+        this.jugador.puntajes[1]={nroMano : 2};
+        try{
+            this.jugador.quitarPuntaje({nroMano : 3});
+        }catch(e) {
+            return (e instanceof NoExisteElementoExeption && e.detalle == 3);
+            }
+        return false;
     },
 
     testGetUltimoPuntaje : function () {
-        //me tiene q devolver el ultimo puntaje
+        this.jugador.puntajes[0]={puntos : 25};
+        this.jugador.puntajes[1]={puntos : 15};
+        this.jugador.puntajes[2]={puntos : 10};
+        this.jugador.puntajes[3]={puntos : 5};
+        return (this.jugador.getUltimoPuntaje() == 5);
     },
 
     testGetUltimoPuntajePrimerPuntaje : function () {
-        //si no hay puntajes me tiene q devolver 0
+        return (this.jugador.getUltimoPuntaje() == 0);
     },
 
 
@@ -50,7 +95,12 @@ TEST.Jugador = {
                 var resultado = {};
                 resultado.name = a;
                 this.setUp();
+                try{
                 resultado.value = this[a]();
+                }catch(e){
+                    resultado.value = false;
+                    console.log(e);
+                }
                 resultados[resultados.length] = resultado;
             }
         }

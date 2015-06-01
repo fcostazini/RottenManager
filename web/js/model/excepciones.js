@@ -8,6 +8,14 @@ function NoExisteElementoExeption (detalle) {
     this.detalle = detalle;
 };
 
+function YaExisteElementoExeption (detalle) {
+    this.detalle = detalle;
+};
+
+function ParametroVacioExeption (detalle) {
+    this.detalle = detalle;
+};
+
 function NoHaySiguienteExeption (detalle) {
     this.detalle = detalle;
 };

@@ -13,12 +13,19 @@ TEST.Mano = {
 
     },
 
+
+    testCerrarMano : function(){
+        //No debe permitir agregar mas de un puntaje por jugador
+    },
+
     testAgregarPuntajeExistente : function(){
       //No debe permitir agregar mas de un puntaje por jugador
     },
+
     testAgregarPuntaje : function(){
       //Verificar que se agregue un puntaje particular
     },
+
     testObtenerPuntajePorJugador : function(){
         //Dado un jugador pasado por parametro, debe devolver el puntaje del mismo
         // mano.getPuntajeByJugador(jugadorParam) --- puntaje.jugador == jugadorParam
