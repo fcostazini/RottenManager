@@ -102,9 +102,9 @@ TEST.Juego = {
     testPenalizarJugador : function(){
         // El juego debe poder agregar una penalizacion sacada de la configuración
         // a un puntaje de un jugador para la mano actual
-        // juego.penalizar(jugador1, configuracion.penalizacion);
+        // juego.penalizar(manoActual.puntaje, configuracion.penalizacion);
     },
-    testBonificarJugar : function(){
+    testBonificarJugador : function(){
         //IDEM Penalizar pero con bonificacion
     },
 
