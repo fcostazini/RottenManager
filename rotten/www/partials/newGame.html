@@ -1,0 +1,11 @@
+<div>
+	<input ng-model="jugador.nombre" id="nombre" placeholder="Nombre">
+	<button id="agregar" ng-click="agregarJugador(jugador)">+</button>
+	
+</div>
+<div><ul class="jugadores">
+<li ng-repeat="jugador in jugadores" ng-show="jugador.nombre">
+	  {{jugador.nombre}}
+	</li>
+  </ul>
+</div>
