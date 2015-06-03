@@ -3,8 +3,7 @@
  */
 
 
-function Mano(numero) {
-    this.numero = numero;
+function Mano() {
 };
 
 Mano.prototype.cerrar = function() {

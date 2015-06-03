@@ -4,7 +4,6 @@
 
 
 function Jugador(nombre) {
-    this.nombre ="";
     if (nombre) {
         this.nombre = nombre;
     }else{
@@ -20,9 +19,7 @@ Jugador.prototype.agregarPuntaje = function(puntaje){
         throw new YaExisteElementoExeption(puntaje.nroMano);
     }
 };
-Jugador.prototype.equals = function(jugador){
-    return this.nombre == jugador.nombre;
-};
+
 Jugador.prototype.quitarPuntaje = function(puntaje){
     var pos = -1;
     for (i in this.puntajes){

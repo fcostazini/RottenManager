@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="models/excepciones.js"></script>
+        <script src="models/jugador.js"></script>
+        <script src="models/puntaje.js"></script>
+        <script src="models/mano.js"></script>
+        <script src="models/juego.js"></script>
+		<script src="tests/testJuego.js"></script>
+        <script src="tests/testJugador.js"></script>
+        <script src="tests/testMano.js"></script>
+        <script src="tests/testPuntaje.js"></script>
+		<script src="../lib/jquery.js"></script>
+		<title>TEST</title>
+		<style>
+			.false {background-color:red}
+			.true {background-color:lightgreen}
+			
+</style>
+	</head>
+	<body>
+		<header>
+		</header>
+
+		<footer>
+			<div class="content">
+				<span>Tests de La Podrida Manager</span>
+			</div>
+		</footer>
+
+		<script>
+		$(document).ready(function(){
+			for(var a in TEST){
+				$(".content").append("<div><span>" + a + "</span><div>");
+				var resultados = TEST[a].run();
+				var table = $("<table></table>");
+				
+				$(resultados).each(function(i,e){
+					var tr = $("<tr></tr>");
+					if(e.value){
+						tr.addClass("true")
+					}else{
+						tr.addClass("false")
+					}
+					tr.append("<td style='width:300px'>" + e.name + "</td>")
+					tr.append("<td>" + e.value + "</td>")
+					table.append(tr);
+				});
+				$(".content").append(table)
+			};
+		});
+
+		</script>
+	</body>
+</html>

@@ -20,22 +20,6 @@ function NoHaySiguienteExeption (detalle) {
     this.detalle = detalle;
 };
 
-function NoHayManosException(){
-
-}
-
-function NoHayJugadoresException(){
-
-}
-
-function JuegoNoIniciadoException(){
-
-}
-
-function JuegoYaIniciadoException(){
-
-}
-
 function NoCierraManoExeption (mano,e){
     this.mano = mano;
     this.excepcionRaiz = e;

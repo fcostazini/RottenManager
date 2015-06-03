@@ -1,8 +1,4 @@
 angular.module('rottenManager.services', [])
-    .service("juego",function(){
-        this.juego = new Juego();
-        return this.juego;
-    })
     .factory('cordovaReady', [function () {
         return function (fn) {
             var queue = [],
@@ -22,5 +18,3 @@ angular.module('rottenManager.services', [])
             };
         };
     }]);
-
-

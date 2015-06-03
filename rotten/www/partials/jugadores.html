@@ -1,0 +1,20 @@
+<div class="">
+	<input ng-model="jugador.nombre" id="nombre" placeholder="Nombre">
+	<button class="btn" id="agregar" ng-click="agregarJugador(jugador)">+</button>
+
+</div>
+<div>
+	<ul class="jugadores" ng-controller="NewGameCtrl">
+		<li ng-repeat="jugador in getJugadores()" ng-show="jugador.nombre">
+	  		{{jugador.nombre}} <button ng-click="quitarJugador(jugador)">-</button>
+		</li>
+  </ul>
+    <div >
+		<a href="#jugadores" id="btn-jugadores" class="btn btn-new">Jugadores</a>
+		<a href="#manos" id="btn-manos" class="btn btn-new">Manos</a>
+		<a href="#config" id="btn-config" class="btn btn-new">Configuración</a>
+	</div>
+	<div >
+		<button ng-click="guardarJugadores('config')" id="btn-new" class="btn btn-new">Nuevo Juego</button>
+	</div >
+</div>

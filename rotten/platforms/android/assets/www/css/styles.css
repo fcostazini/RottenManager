@@ -18,6 +18,10 @@
     -moz-background-size: cover;
     background-size: cover;
 }
+hr{
+	color: rgba(255,255,255,0.2);
+	margin: 10px;
+}
 
 .topcoat-list__container {
     border-bottom: none;
@@ -186,7 +190,14 @@ ul {
 .btn-container{
 margin: 10px;
 padding: 10px;
+display: flex;
 }
+.topcoat-text-input--large {
+	height: 4rem;
+	font-size: 1.3rem;
+	width: 100%;
+}
+	
 .btn{
 	width: 100%;
 	height: auto;

@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link href="topcoat/css/topcoat-mobile-dark.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/pageslider.css" rel="stylesheet">
-    <script data-main="js/app" src="js/require.js"></script>
-</head>
+<html ng-app="rottenManager">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Rotten Manager</title>
+    </head>
+    <body>
+        <div class="app-body">
+            <h1 class="toolbar">The Rotten Manager</h1>
 
-<body>
-</body>
+            <div ng-view></div>
+        </div>
 
+        <!-- Libs -->
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="lib/angular/angular.js"></script>
+        <script type="text/javascript" src="lib/angular/angular-route.js"></script>
+
+        <!-- App -->
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/services.js"></script>
+        <script type="text/javascript" src="js/controllers.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
 </html>

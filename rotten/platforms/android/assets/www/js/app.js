@@ -1,37 +1,13 @@
-require.config({
-
-    baseUrl: 'js/lib',
-
-    paths: {
-        app: '../app',
-        tpl: '../tpl'
-    },
-
-    map: {
-        '*': {
-            'app/models/employee': 'app/models/memory/employee'
-        }
-    },
-
-    shim: {
-        'backbone': {
-            deps: ['underscore', 'jquery'],
-            exports: 'Backbone'
-        },
-        'underscore': {
-            exports: '_'
-        }
-    }
-});
-
-require(['jquery', 'backbone', 'app/router'], function ($, Backbone, Router) {
-
-    var router = new Router();
-
-    $("body").on("click", ".back-button", function (event) {
-        event.preventDefault();
-        window.history.back();
+angular.module('rottenManager', ['ngRoute', 'rottenManager.services', 'rottenManager.controllers'])
+    .config(function ($routeProvider) {
+        $routeProvider
+        .when('/', {
+            controller: 'MainCtrl',
+            templateUrl: 'partials/main.html'
+        })
+        .when('/newGame', {
+            controller: 'NewGameCtrl',
+            templateUrl: 'partials/newGame.html'
+        })
+        .otherwise({redirectTo: '/'});
     });
-
-    Backbone.history.start();
-});
