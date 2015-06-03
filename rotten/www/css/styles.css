@@ -214,3 +214,6 @@ display: flex;
     bottom: 0;
     overflow: hidden;
 }
+div .menu-content{
+    padding: 10px;
+}

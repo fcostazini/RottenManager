@@ -10,11 +10,11 @@
 		</li>
   </ul>
     <div >
-		<a href="#jugadores" id="btn-jugadores" class="btn btn-new">Jugadores</a>
-		<a href="#manos" id="btn-manos" class="btn btn-new">Manos</a>
-		<a href="#config" id="btn-config" class="btn btn-new">Configuración</a>
+        <a href="#jugadores" id="btn-jugadores" class="btn btn-new">Jugadores</a>
+        <a href="#manos" id="btn-manos" class="btn btn-new">Manos</a>
+        <a href="#config" id="btn-config" class="btn btn-new">Configuración</a>
 	</div>
-	<div >
-		<button ng-click="guardarJugadores('config')" id="btn-new" class="btn btn-new">Nuevo Juego</button>
+	<div ng-controller="FlowCtrl">
+		<button ng-click="iniciarJuego()" id="btn-new" class="btn btn-new">Iniciar Juego</button>
 	</div >
 </div>

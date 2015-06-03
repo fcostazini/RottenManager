@@ -25,7 +25,8 @@ TEST.Juego = {
                 this.juego.repartidor == this.jugador1;
     },
     testIniciarJuegoSinManos : function() {
-
+        this.juego.jugadores.push(this.jugador1);
+        this.juego.jugadores.push(this.jugador2);
         try {
             this.juego.iniciarJuego();
             return false;

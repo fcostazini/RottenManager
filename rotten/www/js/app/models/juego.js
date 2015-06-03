@@ -6,21 +6,49 @@ function Juego(){
     this.manoActual = {};
     this.repartidor ={};
     this.iniciado = false;
+
+    this.configuracion = {valorBonificacion: 10, valorPenalidad: 10, cantidadMazos: 2, cantidadManos: 7, manos:[]};
 }
 
-Juego.prototype.iniciarJuego = function(){
-    if(this.manos.length <=0){
-        throw new NoHayManosException();
+Juego.prototype.removerManos = function(){
+    if(this.iniciado){
+        throw new JuegoYaIniciadoException();
     }
+    this.manos = [];
+};
+Juego.prototype.reiniciarJuego = function(){
+    this.iniciado = false;
+    this.manoActual = {};
+    this.manos = [];
+      for(var i in this.jugadores){
+          this.jugadores[i].reiniciarPuntaje();
+      }
+};
+Juego.prototype.iniciarJuego = function(){
+
     if(this.jugadores.length <=1){
         throw  new NoHayJugadoresException();
+    }
+    var mano;
+    this.manos = [];
+    for(var idx in this.configuracion.manos){
+        mano = new Mano(this.configuracion.manos[idx].numero, this.configuracion.manos[idx].cantidad);
+        for(var i in this.jugadores){
+            mano.agregarPuntaje(new Puntaje(this.configuracion.manos[idx].numero,this.jugadores[i]));
+        }
+        this.agregarMano(mano);
+    }
+
+    if(this.manos.length <=0){
+        throw new NoHayManosException();
     }
     this.iniciado = true;
     this.manoActual = this.manos[0];
     this.repartidor = this.jugadores[0];
 
     return this.manoActual;
-}
+};
+
 Juego.prototype.agregarJugador = function(jugador){
     if (this.jugadores.filter(function(e,i){return e.equals(jugador)}).length > 0) {
         throw new YaExisteElementoExeption(jugador);
@@ -46,11 +74,13 @@ Juego.prototype.siguienteMano = function () {
     if(!this.iniciado){
         throw new JuegoNoIniciadoException();
     }
-    try {
-        this.manoActual.cerrar();
-    }catch (e){
-        throw new NoCierraManoExeption(this.manoActual,e);
-    };
+    if(!this.manoActual.esCerrada){
+        try {
+            this.manoActual.cerrar();
+        }catch (e){
+            throw new NoCierraManoExeption(this.manoActual,e);
+        };
+    }
     var posSiguienteMano = -1;
     posSiguienteMano = this.manos.indexOf(this.manoActual)+1;
     if (posSiguienteMano < this.manos.length){
@@ -79,7 +109,7 @@ Juego.prototype.agregarMano = function(mano){
     if(this.iniciado){
         throw new JuegoYaIniciadoException();
     }
-    if(this.manos.filter(function(e,i){return e.numero == mano.numero}).length > 0){
+    if(this.manos.filter(function(e,i){return e.nroMano == mano.nroMano}).length > 0){
         throw new YaExisteElementoExeption(mano);
     }else{
         this.manos.push(mano);

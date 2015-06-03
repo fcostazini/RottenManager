@@ -1,0 +1,16 @@
+<div ng-controller="ConfigCtrl">
+  <div> Mano {{manoActual.nroMano}} - Cartas {{manoActual.cartas}}</div>
+<hr/>
+    <li>
+        <ul ng-repeat="puntaje in getPuntajes()">
+            <label>{{puntaje.jugador.nombre}} - Basas pedidas: {{puntaje.basasPedidas}}</label>
+            <label> - Basas hechas: </label><input type="number" min="0" max="{{getMaximo()}}" ng-model="puntaje.basasHechas"/>
+        </ul>
+
+    </li>
+</div>
+<div >
+    <div ng-controller="FlowCtrl">
+        <button ng-show="basasHechasValidas()"  ng-click="finalizarRonda()"id="btn-new" class="btn btn-new">finalizar Ronda</button>
+    </div >
+</div>

@@ -1,16 +1,18 @@
-<div class="">
-	<input ng-model="jugador.nombre" id="nombre" placeholder="Nombre">
-	<button class="btn" id="agregar" ng-click="agregarJugador(jugador)">+</button>
-	
-</div>
-<div>
-	<ul class="jugadores" ng-controller="ManosCtrl">
-		<li ng-repeat="jugador in getJugadores()" ng-show="jugador.nombre">
-	  		{{jugador.nombre}} <button ng-click="quitarJugador(jugador)">-</button>
-		</li>
-  </ul>
+
+<div ng-controller="ManosCtrl">
+	<div >
+		<button ng-click="recalcularDefaultManos()" id="btn-new" class="btn btn-new">Calcular Default</button>
+	</div >
+<li ng-repeat="mano in getManos()">
+	<ul>
+		<label>{{mano.numero}}</label><input type="number" min="1" max="{{getMaximo()}}" ng-model="mano.cantidad"/>
+	</ul>
+
+</li>
+
+
     <div >
-		<a href="#" id="btn-jugadores" class="btn btn-new">Jugadores</a>
+		<a href="#jugadores" id="btn-jugadores" class="btn btn-new">Jugadores</a>
 		<a href="#manos" id="btn-manos" class="btn btn-new">Manos</a>
 		<a href="#config" id="btn-config" class="btn btn-new">Configuración</a>
 	</div>
