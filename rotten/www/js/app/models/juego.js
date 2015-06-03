@@ -10,7 +10,7 @@ Juego.prototype.agregarJugador = function(jugador){
     if (this.jugadores.indexOf(jugador) <0){
         this.jugadores.push(jugador);
     }
-}
+};
 
 Juego.prototype.quitarJugador = function(jugador){
     var pos = this.jugadores.indexOf(jugador);
@@ -20,7 +20,7 @@ Juego.prototype.quitarJugador = function(jugador){
     }else{
         return false;
     }
-}
+};
 
 Juego.prototype.siguienteMano = function () {
     try {
@@ -36,7 +36,7 @@ Juego.prototype.siguienteMano = function () {
     }else{
         throw new NoHaySiguienteExeption();
     }
-}
+};
 
 Juego.prototype.getMano = function (numero) {
     var encontrado = this.manos.filter( function(mano,indx){
@@ -46,5 +46,12 @@ Juego.prototype.getMano = function (numero) {
         throw new NoExisteElementoExeption(numero);
     }
     return encontrado[0];
+};
 
-}
+Juego.prototype.penalizarJugador = function (jugador, pena) {
+    this.manoActual.getPuntajeJugador(jugador).agregarPenalizacion(pena);
+};
+
+Juego.prototype.bonificarJugador = function (jugador, bono) {
+    this.manoActual.getPuntajeJugador(jugador).agregarBonificacion(bono);
+};

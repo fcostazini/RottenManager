@@ -3,9 +3,18 @@
  */
 
 
-function Mano() {
+function Mano(nroMano, cartas, jugadores[] ) {
+    this.nroMano = nroMano;
+    this.cartas = cartas;
+    this.puntajes = [];
 };
 
 Mano.prototype.cerrar = function() {
     return true;
+}
+
+Mano.prototype.getPuntajeJugador = function(jugador) {
+    var puntaje;
+
+    return puntaje;
 }

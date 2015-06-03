@@ -15,6 +15,7 @@ TEST.Juego = {
 
 
 
+
     testAgregarJugadorSinJugadores : function(){
         this.juego.agregarJugador(this.jugador1);
         return this.juego.jugadores.length == 1;
@@ -100,12 +101,25 @@ TEST.Juego = {
     },
 
     testPenalizarJugador : function(){
-        // El juego debe poder agregar una penalizacion sacada de la configuración
-        // a un puntaje de un jugador para la mano actual
-        // juego.penalizar(manoActual.puntaje, configuracion.penalizacion);
+        var llamoAGetPuntajeJugador = false;
+        var llamoAPuntajePenalizar = false;
+        this.mano1 = {puntaje : {}};
+        this.mano1.puntaje.agregarPenalizacion = function(p){llamoAPuntajePenalizar = true; return true;}
+        this.mano1.getPuntajeJugador = function(j){llamoAGetPuntajeJugador = true; return this.puntaje;};
+        this.juego = new Juego([this.mano1]);
+        this.juego.penalizarJugador(this.jugador1,20);
+        return llamoAGetPuntajeJugador && llamoAPuntajePenalizar;
     },
+
     testBonificarJugador : function(){
-        //IDEM Penalizar pero con bonificacion
+        var llamoAGetPuntajeJugador = false;
+        var llamoAPuntajeBonificar = false;
+        this.mano1 = {puntaje : {}};
+        this.mano1.puntaje.agregarBonificacion = function(b){llamoAPuntajeBonificar = true; return true;}
+        this.mano1.getPuntajeJugador = function(j){llamoAGetPuntajeJugador = true; return this.puntaje;};
+        this.juego = new Juego([this.mano1]);
+        this.juego.bonificarJugador(this.jugador1,20);
+        return llamoAGetPuntajeJugador && llamoAPuntajeBonificar;
     },
 
 	run : function(){
@@ -115,7 +129,12 @@ TEST.Juego = {
 				var resultado ={};
 				resultado.name = a;
                 this.setUp();
-				resultado.value =this[a]();
+                try{
+				    resultado.value =this[a]();
+                }catch(e){
+                    resultado.value = false;
+                    console.log(e);
+                }
 				resultados[resultados.length] = resultado;
 			}
 		}
