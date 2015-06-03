@@ -8,6 +8,7 @@ TEST.Juego = {
     setUp : function(){
         this.jugador1 = {};
         this.jugador2 = {};
+        this.puntaje ={};
         this.mano1 = {cerrar: function () {return true;}, Instancia: 1, numero: 1 };
         this.mano2 = {cerrar: function () {return true;}, Instancia: 2, numero: 2 };
         this.juego = new Juego();
@@ -23,30 +24,17 @@ TEST.Juego = {
         return this.juego.manoActual == this.mano1 &&
                 this.juego.repartidor == this.jugador1;
     },
-    testIniciarJuegoSinManos : function(){
+    testIniciarJuegoSinManos : function() {
 
-        try{
+        try {
             this.juego.iniciarJuego();
             return false;
-        } catch(e){
+        } catch (e) {
             return e instanceof NoHayManosException;
         }
-
-    },
-    testIniciarJuegoSinJugadores : function(){
-        this.juego.manos.push(this.mano1);
-        this.juego.manos.push(this.mano2);
-       try{
-           this.juego.iniciarJuego();
-           return false;
-       } catch(e){
-           return e instanceof NoHayJugadoresException;
-       }
-
     },
 
-
-    testAgregarJugadorSinJugadores: function () {
+    testAgregarJugadorSinJugadores : function(){
         this.juego.agregarJugador(this.jugador1);
         return this.juego.jugadores.length == 1;
     },
@@ -184,6 +172,28 @@ TEST.Juego = {
 
     },
 
+    testPenalizarJugador : function() {
+        var llamoAGetPuntajeJugador = false;
+        var llamoAPuntajePenalizar = false;
+        this.mano1 = {puntaje: {}};
+        this.mano1.puntaje.agregarPenalizacion = function (p) {
+            llamoAPuntajePenalizar = true;
+            return true;
+        }
+        this.mano1.getPuntajeJugador = function (j) {
+            llamoAGetPuntajeJugador = true;
+            return this.puntaje;
+        };
+
+        this.juego.manos.push(this.mano1);
+        this.juego.manos.push(this.mano2);
+        this.juego.jugadores.push(this.jugador1);
+        this.juego.jugadores.push(this.jugador2);
+        this.juego.iniciarJuego();
+
+        this.juego.penalizarJugador(this.jugador1, 20);
+        return llamoAGetPuntajeJugador && llamoAPuntajePenalizar;
+    },
     testQuitarMano: function () {
         this.juego.manos.push(this.mano1);
         var result = this.juego.quitarMano(this.mano1);
@@ -202,31 +212,41 @@ TEST.Juego = {
 
     },
 
-    testPenalizarJugador: function () {
-        // El juego debe poder agregar una penalizacion sacada de la configuración
-        // a un puntaje de un jugador para la mano actual
-        // juego.penalizar(manoActual.puntaje, configuracion.penalizacion);
-    },
-    testBonificarJugador: function () {
-        //IDEM Penalizar pero con bonificacion
+  
+
+    testBonificarJugador : function(){
+        var llamoAGetPuntajeJugador = false;
+        var llamoAPuntajeBonificar = false;
+        this.mano1 = {puntaje : {}};
+        this.mano1.puntaje.agregarBonificacion = function(b){llamoAPuntajeBonificar = true; return true;}
+        this.mano1.getPuntajeJugador = function(j){llamoAGetPuntajeJugador = true; return this.puntaje;};
+        this.juego.manos.push(this.mano1);
+        this.juego.manos.push(this.mano2);
+        this.juego.jugadores.push(this.jugador1);
+        this.juego.jugadores.push(this.jugador2);
+        this.juego.iniciarJuego();
+        this.juego.bonificarJugador(this.jugador1,20);
+        return llamoAGetPuntajeJugador && llamoAPuntajeBonificar;
     },
 
-    run: function () {
-        var resultados = [];
-        for (var a in this) {
-            if (a != "run" && a != "setUp") {
-                var resultado = {};
-                resultado.name = a;
-                try {
+	run : function(){
+		var resultados = [];
+		for(var a in this){
+			if(a != "run" && a != "setUp"){
+				var resultado ={};
+				resultado.name = a;
+                try{
                     this.setUp();
-                    resultado.value = this[a]();
-                } catch (e) {
-                    resultado.value = false;
+                    resultado.value =this[a]();
+                } catch(e){
                     console.log(a);console.log(e);
+                    resultado.value = false;
                 }
-                resultados[resultados.length] = resultado;
-            }
-        }
+
+
+				resultados[resultados.length] = resultado;
+			}
+		}
 
         return resultados;
     }

@@ -27,7 +27,7 @@ Juego.prototype.agregarJugador = function(jugador){
     }else{
         this.jugadores.push(jugador);
     }
-}
+};
 
 Juego.prototype.quitarJugador = function(jugador){
     if(this.iniciado){
@@ -40,7 +40,7 @@ Juego.prototype.quitarJugador = function(jugador){
     }else{
         return false;
     }
-}
+};
 
 Juego.prototype.siguienteMano = function () {
     if(!this.iniciado){
@@ -60,7 +60,7 @@ Juego.prototype.siguienteMano = function () {
     }else{
         throw new NoHaySiguienteExeption();
     }
-}
+};
 
 Juego.prototype.getSiguienteJugador = function(){
     if(!this.iniciado){
@@ -110,5 +110,12 @@ Juego.prototype.getMano = function (numero) {
         throw new NoExisteElementoExeption(numero);
     }
     return encontrado[0];
+};
 
-}
+Juego.prototype.penalizarJugador = function (jugador, pena) {
+    this.manoActual.getPuntajeJugador(jugador).agregarPenalizacion(pena);
+};
+
+Juego.prototype.bonificarJugador = function (jugador, bono) {
+    this.manoActual.getPuntajeJugador(jugador).agregarBonificacion(bono);
+};
