@@ -1,0 +1,17 @@
+<div ng-controller="ConfigCtrl">
+   <div>
+       <div><label>Valor de Penalidad: <input step="5" min="0" ng-model="configuracion.valorPenalidad" type="number" value="{{configuracion.penalidad}}"/> </label></div>
+       <div><label>Valor de Bonificación: <input step ="5" min="0" ng-model="configuracion.valorBonificacion" type="number" value="{{configuracion.bonificacion}}"/></label></div>
+       <div><label>Cantidad de Manos: <input step ="1" min="1" max="20" ng-model="configuracion.cantidadManos" type="number" value="{{configuracion.cantidadManos}}"/></label></div>
+       <div><label>Cantidad Mazos: <input min="1" max="2" ng-model="configuracion.cantidadMazos" type="number" value="{{configuracion.cantidadMazos}}"/></label></div>
+
+   </div>
+    <div class="menu-content">
+        <a href="#jugadores" id="btn-jugadores">Jugadores</a>
+        <a href="#manos" id="btn-manos">Manos</a>
+        <a href="#config" id="btn-config">Configuración</a>
+    </div>
+    <div >
+        <button ng-click="guardarJugadores('config')" id="btn-new" >Iniciar Juego</button>
+    </div >
+</div>

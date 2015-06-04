@@ -1,0 +1,16 @@
+<div ng-controller="ConfigCtrl">
+  <div> Mano {{manoActual.nroMano}} - Cartas {{manoActual.cartas}}</div>
+<hr/>
+    <li>
+        <ul ng-repeat="jugador in getJugadores()">
+            <label>{{jugador.nombre}} : {{jugador.total}}</label>
+        </ul>
+
+    </li>
+</div>
+<div >
+    <div ng-controller="FlowCtrl">
+        <button  ng-show="haySiguienteRonda()" ng-click="siguienteRonda()" class="btn btn-new">finalizar Ronda</button>
+        <button  ng-show="!haySiguienteRonda()" ng-click="finalizarJuego()" class="btn btn-new">finalizar Juego</button>
+    </div >
+</div>

@@ -6,7 +6,7 @@
 function Puntaje(nroMano, jugador) {
     this.nroMano = nroMano;
     this.jugador = jugador;
-    this.puntos = jugador.getUtltimoPuntaje();
+    this.puntos = 0;
     this.jugador.agregarPuntaje(this);
     this.basasPedidas = 0;
     this.basasHechas = 0;
@@ -30,7 +30,6 @@ Puntaje.prototype.agregarBasaHecha = function() {
     this.basasHechas ++;
     return this.basasHechas;
 };
-
 Puntaje.prototype.quitarBasaHecha = function() {
     if (this.basasHechas>0) {
         this.basasHechas --;
@@ -61,7 +60,13 @@ Puntaje.prototype.quitarPenalizacion = function(pena) {
     }
     return this.penalizacion;
 };
-
+Puntaje.prototype.reiniciar = function(){
+    this.basasPedidas = 0;
+    this.basasHechas = 0;
+    this.bonificacion = 0;
+    this.penalizacion = 0;
+    this.puntos = 0;
+};
 Puntaje.prototype.calcularPuntos = function() {
     this.puntos  += this.bonificacion - this.penalizacion;
     if(this.basasPedidas == this.basasHechas){
@@ -71,5 +76,6 @@ Puntaje.prototype.calcularPuntos = function() {
     }else if(this.basasPedidas < this.basasHechas){
         this.puntos += (this.basasHechas * -5);
     }
+    this.jugador.actualizarTotal(this.puntos);
     return this.puntos;
 };
