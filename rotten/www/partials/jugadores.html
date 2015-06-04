@@ -1,24 +1,37 @@
-<div class="">
-    <input ng-model="jugador.nombre" id="nombre" placeholder="Nombre">
-    <button class="btn" id="agregar" ng-click="agregarJugador(jugador)">+</button>
+<div class="bar bar-header bar-balanced">
 
+    <h1 class="title">The Rotten Manager</h1>
 </div>
-<div>
-    <ul class="jugadores" ng-controller="NewGameCtrl">
-        <li ng-repeat="jugador in getJugadores()" ng-show="jugador.nombre">
-            {{jugador.nombre}}
-            <button ng-click="quitarJugador(jugador)">-</button>
-        </li>
-    </ul>
-</div>
-<div class="bar bar-footer bar-balanced">
-    <div>
-        <a href="#jugadores" id="btn-jugadores" class="btn btn-new">Jugadores</a>
-        <a href="#manos" id="btn-manos" class="btn btn-new">Manos</a>
-        <a href="#config" id="btn-config" class="btn btn-new">Configuración</a>
+<ion-view>
+    <ion-content class="has-header has-footer has-subfooter" ng-controller="NewGameCtrl">
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+                <input type="text" placeholder="Nombre" ng-model="jugador.nombre">
+            </label>
+            <button class="button button-small button-dark" ng-click="agregarJugador(jugador)">
+                <i class="icon ion-plus"></i>
+            </button>
+        </div>
+        <ion-list>
+            <ion-item class="item item-button-right" ng-repeat="jugador in getJugadores()" ng-show="jugador.nombre">
+                {{jugador.nombre}}
+                <button class="button button-clear" ng-click="quitarJugador(jugador)">
+                    <i class="icon ion-minus-circled assertive"></i>
+                </button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+<div class="bar bar-subfooter bar-balanced" ng-controller="FlowCtrl">
+    <div class="button-bar">
+        <a href="#jugadores" class="button button-clear"><i class="icon ion-person"></i></a>
+        <a href="#manos" class="button button-clear"><i class="icon ion-refresh"></i></a>
+        <a href="#config" class="button button-clear"><i class="icon ion-settings"></i></a>
     </div>
-    <div ng-controller="FlowCtrl">
-        <button ng-click="iniciarJuego()" id="btn-new" class="btn btn-new">Iniciar Juego</button>
-    </div>
 </div>
+<ion-footer-bar class="bar-assertive bar-balanced" ng-controller="FlowCtrl">
+    <div class="button-bar">
+        <button ng-click="iniciarJuego()" class="button button-clear bold"><i class="icon ion-play"></i></button>
+    </div>
+</ion-footer-bar>
 

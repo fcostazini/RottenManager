@@ -3,7 +3,7 @@ angular.module('rottenManager.controllers', [])
 
         $scope.recalcularDefaultManos = function(){
             var ms = [];
-            var cMaxMano = this.getMaximo();
+            var cMaxMano = $scope.getMaximo();
             if(cMaxMano<=0){
                 return [];
             }
@@ -36,7 +36,7 @@ angular.module('rottenManager.controllers', [])
 
         $scope.getManos = function(){
             if(!juego.configuracion.manos || juego.configuracion.manos.length <=0){
-                this.recalcularDefaultManos();
+                $scope.recalcularDefaultManos();
             }
             return juego.configuracion.manos;
         }
@@ -50,7 +50,9 @@ angular.module('rottenManager.controllers', [])
         $scope.configuracion = juego.configuracion;
     }])
     .controller('NewGameCtrl', ['$scope', '$location', 'juego', function ($scope,$location,juego) {
-        juego.reiniciarJuego();
+
+        $scope.juego = juego;
+        $socpe.juego.reiniciarJuego();
 		$scope.agregarJugador = function(){
             try {
                 juego.agregarJugador(new Jugador($scope.jugador.nombre));
@@ -73,9 +75,10 @@ angular.module('rottenManager.controllers', [])
 
     }])
     .controller('FlowCtrl',['$scope', 'juego', '$location', function ($scope,juego,$location) {
+        $scope.juego = juego;
         $scope.iniciarJuego = function(){
             try{
-                juego.iniciarJuego();
+                $scope.juego.iniciarJuego();
             } catch(e){
                 console.log(e);
                 return false;
@@ -84,32 +87,32 @@ angular.module('rottenManager.controllers', [])
         };
         $scope.basasHechasValidas = function(){
             var count = 0;
-            for( var idx in this.manoActual.puntajes){
-                count += this.manoActual.puntajes[idx].basasHechas;
+            for( var idx in $scope.juego.juego.puntajes){
+                count += $scope.juego.manoActual.puntajes[idx].basasHechas;
             }
-            return count == this.getMaximo();
+            return count == $scope.getMaximo();
         };
         $scope.basasPedidasValidas = function(){
             var count = 0;
-          for( var idx in this.manoActual.puntajes){
-              count += this.manoActual.puntajes[idx].basasPedidas;
+          for( var idx in $scope.juego.manoActual.puntajes){
+              count += $scope.juego.manoActual.puntajes[idx].basasPedidas;
           }
-            return count != this.getMaximo();
+            return count != $scope.getMaximo();
         };
 
         $scope.getJugadores = function(){
-            return juego.jugadores;
+            return $scope.juego.jugadores;
         }
         $scope.comenzarRonda = function(){
             $location.path("marcarBasasHechas");
         };
         $scope.finalizarRonda = function(){
-            this.manoActual.cerrar();
+            $scope.juego.manoActual.cerrar();
                 $location.path("finRonda");
 
         };
         $scope.haySiguienteRonda = function(){
-            return juego.manos.length > this.manoActual.nroMano;
+            return $scope.juego.manos.length > $scope.juego.manoActual.nroMano;
         };
 
         $scope.finalizarJuego = function(){
@@ -118,19 +121,18 @@ angular.module('rottenManager.controllers', [])
 
         $scope.siguienteRonda = function(){
             try {
-                this.manoActual = juego.siguienteMano();
+                $scope.juego.siguienteMano();
             }catch(e){
                 console.log(e);
                 $location.path("");
             }
             $location.path("pedirBasas");
         };
-        $scope.manoActual = juego.manoActual;
-       $scope.getPuntajes = function(){
-           return this.manoActual.puntajes;
+        $scope.getPuntajes = function(){
+           return $scope.juego.manoActual.puntajes;
        };
         $scope.getMaximo = function(){
-            return this.manoActual.cartas;
+            return $scope.juego.manoActual.cartas;
         }
 
     }])

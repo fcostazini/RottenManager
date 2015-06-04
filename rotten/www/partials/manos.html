@@ -1,23 +1,28 @@
+<div class="bar bar-header bar-balanced">
 
-<div ng-controller="ManosCtrl">
-	<div >
-		<button ng-click="recalcularDefaultManos()" id="btn-new" class="btn btn-new">Calcular Default</button>
-	</div >
-<li ng-repeat="mano in getManos()">
-	<ul>
-		<label>{{mano.numero}}</label><input type="number" min="1" max="{{getMaximo()}}" ng-model="mano.cantidad"/>
-	</ul>
-
-</li>
+	<h1 class="title">The Rotten Manager</h1>
 </div>
-
-<div class="bar bar-footer bar-balanced">
-	<div>
-		<a href="#jugadores" id="btn-jugadores" class="btn btn-new">Jugadores</a>
-		<a href="#manos" id="btn-manos" class="btn btn-new">Manos</a>
-		<a href="#config" id="btn-config" class="btn btn-new">Configuración</a>
-	</div>
-	<div ng-controller="FlowCtrl">
-		<button ng-click="iniciarJuego()" id="btn-new" class="btn btn-new">Iniciar Juego</button>
+<ion-view>
+	<ion-content class="has-header has-footer has-subfooter" ng-controller="ManosCtrl">
+		<div class="item item-input-inset">
+			<button ng-click="recalcularDefaultManos()" id="button button-pacific" class="btn btn-new">Calcular Default</button>
+		</div>
+		<ion-list>
+			<ion-item class=" row item item-button-right" ng-repeat="mano in getManos()" ng-show="mano.numero">
+				<label>{{mano.numero}}</label><input type="number" min="1" max="{{getMaximo()}}" ng-model="mano.cantidad"/>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
+<div class="bar bar-subfooter bar-balanced" ng-controller="FlowCtrl">
+	<div class="button-bar">
+		<a href="#jugadores" class="button button-clear"><i class="icon ion-person"></i></a>
+		<a href="#manos" class="button button-clear"><i class="icon ion-refresh"></i></a>
+		<a href="#config" class="button button-clear"><i class="icon ion-settings"></i></a>
 	</div>
 </div>
+<ion-footer-bar class="bar-assertive bar-balanced" ng-controller="FlowCtrl">
+	<div class="button-bar">
+		<button ng-click="iniciarJuego()" class="button button-clear bold"><i class="icon ion-play"></i></button>
+	</div>
+</ion-footer-bar>
