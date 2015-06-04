@@ -52,7 +52,7 @@ angular.module('rottenManager.controllers', [])
     .controller('NewGameCtrl', ['$scope', '$location', 'juego', function ($scope,$location,juego) {
 
         $scope.juego = juego;
-        $socpe.juego.reiniciarJuego();
+		$scope.juego.reiniciarJuego();
 		$scope.agregarJugador = function(){
             try {
                 juego.agregarJugador(new Jugador($scope.jugador.nombre));

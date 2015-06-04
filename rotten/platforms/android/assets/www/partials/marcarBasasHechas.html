@@ -1,16 +1,24 @@
-<div ng-controller="ConfigCtrl">
-  <div> Mano {{manoActual.nroMano}} - Cartas {{manoActual.cartas}}</div>
-<hr/>
-    <li>
-        <ul ng-repeat="puntaje in getPuntajes()">
-            <label>{{puntaje.jugador.nombre}} - Basas pedidas: {{puntaje.basasPedidas}}</label>
-            <label> - Basas hechas: </label><input type="number" min="0" max="{{getMaximo()}}" ng-model="puntaje.basasHechas"/>
-        </ul>
+<div class="bar bar-header bar-balanced">
 
-    </li>
+    <h1 class="title">The Rotten Manager</h1>
 </div>
-<div >
-    <div ng-controller="FlowCtrl">
-        <button ng-show="basasHechasValidas()"  ng-click="finalizarRonda()"id="btn-new" class="btn btn-new">finalizar Ronda</button>
-    </div >
+<div class="bar bar-subheader bar-balanced" >
+    <h2 class="title"> Mano {{juego.manoActual.nroMano}} - Cartas {{juego.manoActual.cartas}}</h2>
 </div>
+<ion-view>
+    <ion-content class="has-header has-subheader has-footer" >
+        <ion-list>
+            <ion-item class="item item-button-right" ng-repeat="puntaje in getPuntajes()">
+                <label>{{puntaje.jugador.nombre}} - Basas pedidas: {{puntaje.basasPedidas}}</label>
+                <label> - Basas hechas: </label><input type="number" min="0" max="{{getMaximo()}}"
+                                                       ng-model="puntaje.basasHechas"/>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+<ion-footer-bar class="bar-assertive bar-balanced" ng-controller="FlowCtrl">
+    <div class="button-bar">
+        <button ng-show="basasHechasValidas()" ng-click="finalizarRonda()" class="button button-clear bold"><i
+                class="icon ion-play"></i></button>
+    </div>
+</ion-footer-bar>

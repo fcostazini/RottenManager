@@ -287,6 +287,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="con&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;contro&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;contr&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;man&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/manos.html&#10;apps&#9;null&#9;null&#10;app&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app.js&#10;jugad&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/jugadores.html&#10;index&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/index.html&#10;juego&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/juego.js&#10;inicia&#9;null&#9;null&#10;Punta&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/puntaje.js&#10;ju&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/jugador.js&#10;puntaje&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/puntaje.js&#10;juga&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/jugador.js&#10;tabla&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/tablaPosiciones.html&#10;jugador&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/jugador.js&#10;control&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;co&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;controll&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;basas&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/pedirBasas.html&#10;mano&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/manos.html&#10;basa&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/pedirBasas.html&#10;Puntaje&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/puntaje.js&#10;testJueg&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests/testJuego.js&#10;ma&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/mano.js&#10;serv&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/services.js&#10;manos&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/manos.html&#10;*.css&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/css/styles.css&#10;test&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests/testJuego.js&#10;ne&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/newGame.html&#10;newG&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/newGame.html&#10;new&#9;ACTION&#9;NewGroup&#10;tests&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests.html&#10;testJ&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests/testJuego.js&#10;exce&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/excepciones.js&#10;rou&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/router.js&#10;main&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/main.html&#10;view&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/view.html&#10;controlle&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;jugadores&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/tpl/Jugadores.html" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -348,7 +349,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -387,6 +388,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
