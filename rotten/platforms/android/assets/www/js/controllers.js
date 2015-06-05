@@ -48,6 +48,38 @@ angular.module('rottenManager.controllers', [])
     }])
     .controller('ConfigCtrl', ['$scope', 'juego', function ($scope,juego) {
         $scope.configuracion = juego.configuracion;
+        $scope.modificarPenalidad = function(valor){
+            $scope.configuracion.valorPenalidad += valor;
+            if($scope.configuracion.valorPenalidad < 0){
+                $scope.configuracion.valorPenalidad = 0;
+            }
+
+        };
+        $scope.modificarBonificacion = function(valor){
+            $scope.configuracion.valorBonificacion += valor;
+            if($scope.configuracion.valorBonificacion < 0){
+                $scope.configuracion.valorBonificacion = 0;
+            }
+
+        };
+        $scope.modificarCantidadManos = function(valor){
+            $scope.configuracion.cantidadManos += valor;
+            if($scope.configuracion.cantidadManos < 1){
+                $scope.configuracion.cantidadManos = 1;
+            }
+
+        };
+        $scope.modificarCantidadMazos = function(valor){
+            $scope.configuracion.cantidadMazos += valor;
+            if($scope.configuracion.cantidadMazos < 1){
+                $scope.configuracion.cantidadMazos = 1;
+            }
+            if($scope.configuracion.cantidadMazos > 2){
+                $scope.configuracion.cantidadMazos = 2;
+            }
+
+        };
+
     }])
     .controller('NewGameCtrl', ['$scope', '$location', 'juego', function ($scope,$location,juego) {
 

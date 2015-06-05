@@ -1,22 +1,52 @@
-
 <div class="bar bar-header bar-balanced">
 
     <h1 class="title">The Rotten Manager</h1>
 </div>
-<ion-view>
-    <ion-content class="has-header has-foote has-subfooterr" ng-controller="ConfigCtrl">
+<ion-view hide-back-button="true">
+    <ion-content class="has-header has-footer has-subfooter" ng-controller="ConfigCtrl">
         <div ng-controller="ConfigCtrl">
-            <div>
-                <div><label>Valor de Penalidad: <input step="5" min="0" ng-model="configuracion.valorPenalidad" type="number"
-                                                       value="{{configuracion.penalidad}}"/> </label></div>
-                <div><label>Valor de Bonificación: <input step="5" min="0" ng-model="configuracion.valorBonificacion"
-                                                          type="number" value="{{configuracion.bonificacion}}"/></label></div>
-                <div><label>Cantidad de Manos: <input step="1" min="1" max="20" ng-model="configuracion.cantidadManos"
-                                                      type="number" value="{{configuracion.cantidadManos}}"/></label></div>
-                <div><label>Cantidad Mazos: <input min="1" max="2" ng-model="configuracion.cantidadMazos" type="number"
-                                                   value="{{configuracion.cantidadMazos}}"/></label></div>
+
+            <div class="row center">
+                <span class="col col-50 ">Valor de Penalidad </span>
+
+                <div class="button-bar center">
+                    <button ng-click="modificarPenalidad(-5)" class="button button-clear"><i class="icon ion-ios-arrow-left assertive"></i></button>
+                    <span class="display-numero"><b>{{configuracion.valorPenalidad}}</b></span>
+                    <button ng-click="modificarPenalidad(5)" class="button button-clear"><i class="icon ion-ios-arrow-right balanced"></i></button>
+                </div>
 
             </div>
+            <div class="row center">
+                <span class="col col-50 ">Valor de Bonifcación </span>
+
+                <div class="button-bar center">
+                    <button ng-click="modificarBonificacion(-5)" class="button button-clear"><i class="icon ion-ios-arrow-left assertive"></i></button>
+                    <span class="display-numero"><b>{{configuracion.valorBonificacion}}</b></span>
+                    <button ng-click="modificarBonificacion(5)" class="button button-clear"><i class="icon ion-ios-arrow-right balanced"></i></button>
+                </div>
+            </div>
+
+            <div class="row center">
+                <span class="col col-50 ">Cantidad de Manos</span>
+
+                <div class="button-bar center">
+                    <button ng-click="modificarCantidadManos(-1)" class="button button-clear"><i class="icon ion-ios-arrow-left assertive"></i></button>
+                    <span class="display-numero"><b>{{configuracion.cantidadManos}}</b></span>
+                    <button ng-click="modificarCantidadManos(1)" class="button button-clear"><i class="icon ion-ios-arrow-right balanced"></i></button>
+                </div>
+            </div>
+
+
+            <div class="row center">
+                <span class="col col-50 ">Cantidad de Mazos</span>
+
+                <div class="button-bar center">
+                    <button ng-click="modificarCantidadMazos(-1)" class="button button-clear"><i class="icon ion-ios-arrow-left assertive"></i></button>
+                    <span class="display-numero"><b>{{configuracion.cantidadMazos}}</b></span>
+                    <button ng-click="modificarCantidadMazos(1)"class="button button-clear"><i class="icon ion-ios-arrow-right balanced"></i></button>
+                </div>
+            </div>
+
         </div>
     </ion-content>
 </ion-view>

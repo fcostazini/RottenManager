@@ -9,7 +9,15 @@
 		</div>
 		<ion-list>
 			<ion-item class=" row item item-button-right" ng-repeat="mano in getManos()" ng-show="mano.numero">
-				<label>{{mano.numero}}</label><input type="number" min="1" max="{{getMaximo()}}" ng-model="mano.cantidad"/>
+				<div class="row center">
+					<span class="col col-50 ">Mano {{mano.numero}}</span>
+
+					<div class="button-bar center">
+						<button ng-click="modificarMano(-1,mano)" class="button button-clear"><i class="icon ion-ios-arrow-left assertive"></i></button>
+						<span class="display-numero"><b>{{mano.cantidad}}</b></span>
+						<button ng-click="modificarMano(1,mano)" class="button button-clear"><i class="icon ion-ios-arrow-right balanced"></i></button>
+					</div>
+				</div>
 			</ion-item>
 		</ion-list>
 	</ion-content>
