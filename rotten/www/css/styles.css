@@ -221,6 +221,13 @@ div .menu-content{
     align-items: center;
 }
 
+.nombre-jugador{
+	marggin-bottom: -10px;
+	padding-left: 10px;
+}
+.not-selected{
+	opacity: 0.5;
+}
 ion-content{
     background: rgb(250,250,250);
 }

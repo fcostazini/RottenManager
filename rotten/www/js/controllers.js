@@ -124,6 +124,25 @@ angular.module('rottenManager.controllers', [])
     }])
     .controller('FlowCtrl',['$scope', 'juego', '$location', function ($scope,juego,$location) {
         $scope.juego = juego;
+		$scope.modificarBasasAPedir = function(valor,puntaje){
+            puntaje.basasPedidas += valor;
+            if(puntaje.basasPedidas > $scope.getMaximo()){
+                puntaje.basasPedidas = $scope.getMaximo();
+            }
+            if(puntaje.basasPedidas < 0){
+                puntaje.basasPedidas = 0;
+            }
+        };
+		
+		$scope.modificarBasasHechas = function(valor,puntaje){
+            puntaje.basasHechas += valor;
+            if(puntaje.basasHechas > $scope.getMaximo()){
+                puntaje.basasHechas = $scope.getMaximo();
+            }
+            if(puntaje.basasHechas < 0){
+                puntaje.basasHechas = 0;
+            }
+        };
         $scope.iniciarJuego = function(){
             try{
                 $scope.juego.iniciarJuego();
