@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07cf360e-07cb-496e-b13c-05c66dffee63" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/partials/configuracion.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/partials/configuracion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/partials/configuracion.html" afterPath="$PROJECT_DIR$/www/partials/configuracion.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/partials/jugadores.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/partials/jugadores.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/partials/jugadores.html" afterPath="$PROJECT_DIR$/www/partials/jugadores.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/partials/main.html" afterPath="$PROJECT_DIR$/www/partials/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/partials/manos.html" afterPath="$PROJECT_DIR$/www/partials/manos.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/partials/main.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/partials/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/partials/manos.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/partials/manos.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/partials/marcarBasasHechas.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/partials/marcarBasasHechas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/partials/marcarBasasHechas.html" afterPath="$PROJECT_DIR$/www/partials/marcarBasasHechas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/partials/pedirBasas.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/partials/pedirBasas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/partials/pedirBasas.html" afterPath="$PROJECT_DIR$/www/partials/pedirBasas.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/css/styles.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/styles.css" afterPath="$PROJECT_DIR$/www/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -38,8 +39,28 @@
       <file leaf-file-name="jugadores.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/partials/jugadores.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6153846">
+            <state vertical-scroll-proportion="-0.65384614">
               <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mano.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/app/models/mano.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jugador.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/app/models/jugador.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -49,37 +70,27 @@
         <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+              <caret line="134" column="41" selection-start-line="134" selection-start-column="41" selection-end-line="134" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/partials/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28716215">
+            <state vertical-scroll-proportion="-6.5384617">
               <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="juego.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/app/models/juego.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="configuracion.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/partials/configuracion.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
-              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -88,8 +99,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.0172415">
-              <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.37931">
+              <caret line="225" column="23" selection-start-line="225" selection-start-column="23" selection-end-line="225" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -98,28 +109,18 @@
       <file leaf-file-name="manos.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/partials/manos.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.1320753">
+            <state vertical-scroll-proportion="-10.346154">
               <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="marcarBasasHechas.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="marcarBasasHechas.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/partials/marcarBasasHechas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
-              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pedirBasas.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/partials/pedirBasas.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
-              <caret line="5" column="98" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
+            <state vertical-scroll-proportion="0.2820946">
+              <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -128,8 +129,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
-              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+            <state vertical-scroll-proportion="-9.153846">
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -155,18 +156,18 @@
         <option value="$PROJECT_DIR$/www/js/app/models/mano.js" />
         <option value="$PROJECT_DIR$/www/js/app/models/puntaje.js" />
         <option value="$PROJECT_DIR$/www/js/app/models/juego.js" />
-        <option value="$PROJECT_DIR$/www/js/app/models/jugador.js" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
         <option value="$PROJECT_DIR$/www/partials/tablaPosiciones.html" />
-        <option value="$PROJECT_DIR$/www/partials/pedirBasas.html" />
-        <option value="$PROJECT_DIR$/www/partials/marcarBasasHechas.html" />
         <option value="$PROJECT_DIR$/www/partials/jugadores.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/css/styles.css" />
         <option value="$PROJECT_DIR$/www/partials/configuracion.html" />
         <option value="$PROJECT_DIR$/www/partials/manos.html" />
         <option value="$PROJECT_DIR$/www/partials/main.html" />
+        <option value="$PROJECT_DIR$/www/partials/pedirBasas.html" />
+        <option value="$PROJECT_DIR$/www/css/styles.css" />
+        <option value="$PROJECT_DIR$/www/js/app/models/jugador.js" />
         <option value="$PROJECT_DIR$/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/www/partials/marcarBasasHechas.html" />
       </list>
     </option>
   </component>
@@ -206,6 +207,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,8 +297,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,7 +306,7 @@
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="contr&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;jugadores&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/jugadores.html&#10;con&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;contro&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;man&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/manos.html&#10;apps&#9;null&#9;null&#10;app&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app.js&#10;jugad&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/jugadores.html&#10;index&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/index.html&#10;juego&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/juego.js&#10;inicia&#9;null&#9;null&#10;Punta&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/puntaje.js&#10;ju&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/jugador.js&#10;puntaje&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/puntaje.js&#10;juga&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/jugador.js&#10;tabla&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/tablaPosiciones.html&#10;jugador&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/jugador.js&#10;control&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;co&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;controll&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;basas&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/pedirBasas.html&#10;mano&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/manos.html&#10;basa&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/pedirBasas.html&#10;Puntaje&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/puntaje.js&#10;testJueg&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests/testJuego.js&#10;ma&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/mano.js&#10;serv&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/services.js&#10;manos&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/manos.html&#10;*.css&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/css/styles.css&#10;test&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests/testJuego.js&#10;ne&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/newGame.html&#10;newG&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/newGame.html&#10;new&#9;ACTION&#9;NewGroup&#10;tests&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests.html&#10;testJ&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests/testJuego.js&#10;exce&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/excepciones.js&#10;rou&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/router.js&#10;main&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/main.html&#10;view&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/view.html&#10;controlle&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js" />
+    <property name="SearchEverywhereHistoryKey" value="jugador&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/jugador.js&#10;man&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/mano.js&#10;contr&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;ionic.css&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/css/ionic.css&#10;jugadores&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/jugadores.html&#10;con&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;contro&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;apps&#9;null&#9;null&#10;app&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app.js&#10;jugad&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/jugadores.html&#10;index&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/index.html&#10;juego&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/juego.js&#10;inicia&#9;null&#9;null&#10;Punta&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/puntaje.js&#10;ju&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/jugador.js&#10;puntaje&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/puntaje.js&#10;juga&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/jugador.js&#10;tabla&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/tablaPosiciones.html&#10;control&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;co&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;controll&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js&#10;basas&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/pedirBasas.html&#10;mano&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/manos.html&#10;basa&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/pedirBasas.html&#10;Puntaje&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/puntaje.js&#10;testJueg&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests/testJuego.js&#10;ma&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/mano.js&#10;serv&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/services.js&#10;manos&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/manos.html&#10;*.css&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/css/styles.css&#10;test&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests/testJuego.js&#10;ne&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/newGame.html&#10;newG&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/newGame.html&#10;new&#9;ACTION&#9;NewGroup&#10;tests&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests.html&#10;testJ&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/tests/testJuego.js&#10;exce&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/models/excepciones.js&#10;rou&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/app/router.js&#10;main&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/main.html&#10;view&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/partials/view.html&#10;controlle&#9;FILE&#9;file://C:/Users/FaQ/Documents/GitHub/RootenManager/rotten/www/js/controllers.js" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -374,6 +375,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5402477" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1669107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -385,7 +387,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -426,6 +427,94 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/partials/jugadores.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/partials/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app/models/juego.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/partials/configuracion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/partials/manos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/partials/marcarBasasHechas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/partials/pedirBasas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="98" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/partials/jugadores.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -462,7 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="37" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -494,7 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="98" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -550,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="18.423077">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -586,14 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app/models/mano.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -615,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.24757281">
           <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,34 +703,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app/models/jugador.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/partials/tablaPosiciones.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/partials/jugadores.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -665,50 +718,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0172415">
-          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/partials/configuracion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/partials/manos.html">
+    <entry file="file://$PROJECT_DIR$/www/partials/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.1320753">
-          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/partials/pedirBasas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="98" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="98" />
+        <state vertical-scroll-proportion="0.22466215">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/partials/marcarBasasHechas.html">
+    <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/ionic.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33208254">
+          <caret line="2819" column="9" selection-start-line="2819" selection-start-column="5" selection-end-line="2819" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.37931">
+          <caret line="225" column="23" selection-start-line="225" selection-start-column="23" selection-end-line="225" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app/models/jugador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -716,15 +785,39 @@
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+          <caret line="134" column="41" selection-start-line="134" selection-start-column="41" selection-end-line="134" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/partials/main.html">
+    <entry file="file://$PROJECT_DIR$/www/partials/jugadores.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28716215">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app/models/mano.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/partials/manos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.346154">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/partials/marcarBasasHechas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2820946">
+          <caret line="11" column="103" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
           <folding />
         </state>
       </provider>

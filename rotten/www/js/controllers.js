@@ -1,7 +1,10 @@
 
 angular.module('rottenManager.controllers', [])
-    .controller('ManosCtrl', ['$scope', 'juego',function ($scope,juego) {
+    .controller('ManosCtrl', ['$scope', '$ionicPlatform', 'juego',function ($scope,$ionicPlatform,juego) {
         $scope.juego = juego;
+        $ionicPlatform.registerBackButtonAction(function () {
+           return false;
+        }, 100);
         $scope.modificarMano = function(valor,mano){
           mano.cantidad += valor;
             if(mano.cantidad > $scope.getMaximo()){
@@ -122,7 +125,7 @@ angular.module('rottenManager.controllers', [])
         }
 
     }])
-    .controller('FlowCtrl',['$scope', 'juego', '$location', function ($scope,juego,$location) {
+    .controller('FlowCtrl',['$scope', 'juego', '$ionicScrollDelegate', '$location', function ($scope,juego,$ionicScrollDelegate, $location) {
         $scope.juego = juego;
 		$scope.modificarBasasAPedir = function(valor,puntaje){
             puntaje.basasPedidas += valor;
@@ -145,6 +148,7 @@ angular.module('rottenManager.controllers', [])
         };
         $scope.iniciarJuego = function(){
             try{
+                $ionicScrollDelegate.scrollTop();
                 $scope.juego.iniciarJuego();
             } catch(e){
                 console.log(e);
@@ -171,9 +175,11 @@ angular.module('rottenManager.controllers', [])
             return $scope.juego.jugadores;
         }
         $scope.comenzarRonda = function(){
+            $ionicScrollDelegate.scrollTop();
             $location.path("marcarBasasHechas");
         };
         $scope.finalizarRonda = function(){
+            $ionicScrollDelegate.scrollTop();
             $scope.juego.manoActual.cerrar();
                 $location.path("finRonda");
 
@@ -183,11 +189,13 @@ angular.module('rottenManager.controllers', [])
         };
 
         $scope.finalizarJuego = function(){
+            $ionicScrollDelegate.scrollTop();
             $location.path("");
         };
 
         $scope.siguienteRonda = function(){
             try {
+                $ionicScrollDelegate.scrollTop();
                 $scope.juego.siguienteMano();
             }catch(e){
                 console.log(e);

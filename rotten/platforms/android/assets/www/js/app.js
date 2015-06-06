@@ -25,7 +25,7 @@ angular.module('rottenManager', ['ionic', 'rottenManager.services', 'rottenManag
                 controller: 'ConfigCtrl',
                 templateUrl: 'partials/configuracion.html'
             })
-            .state('/manos', { url:'/manos',
+            .state('manos', { url:'/manos',
                 controller: 'ManosCtrl',
                 templateUrl: 'partials/manos.html'
             })

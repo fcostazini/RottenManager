@@ -3,8 +3,8 @@
 	<h1 class="title">The Rotten Manager</h1>
 </div>
 <ion-view>
-	<ion-content class="padding has-header">
-		<div class="btn-container"><a href="#jugadores" class="button button-block button-positive">Nuevo Juego</a></div>
+	<ion-content class="padding has-header" ng-controller="NewGameCtrl">
+		<div class="btn-container"><button ng-click="newGame()" class="button button-block button-positive">Nuevo Juego</button></div>
 		<div class="btn-container"><a href="#load" class="button button-block button-positive">Cargar Juego</a> </div>
 		</ion-list>
 	</ion-content>

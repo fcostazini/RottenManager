@@ -1,5 +1,20 @@
+
 angular.module('rottenManager.controllers', [])
-    .controller('ManosCtrl', ['$scope', 'juego',function ($scope,juego) {
+    .controller('ManosCtrl', ['$scope', '$ionicPlatform', 'juego',function ($scope,$ionicPlatform,juego) {
+        $scope.juego = juego;
+        $ionicPlatform.registerBackButtonAction(function () {
+           return false;
+        }, 100);
+        $scope.modificarMano = function(valor,mano){
+          mano.cantidad += valor;
+            if(mano.cantidad > $scope.getMaximo()){
+                mano.cantidad = $scope.getMaximo();
+            }
+            if(mano.cantidad < 1){
+                mano.cantidad = 1;
+            }
+
+        };
 
         $scope.recalcularDefaultManos = function(){
             var ms = [];
@@ -8,7 +23,7 @@ angular.module('rottenManager.controllers', [])
                 return [];
             }
             var nroMano = 0;
-            var cantMin = cMaxMano - juego.configuracion.cantidadManos + 1;
+            var cantMin = cMaxMano - $scope.juego.configuracion.cantidadManos + 1;
             for(var i = cantMin; i <= cMaxMano; i++){
                 nroMano++;
             var cant = i;
@@ -19,15 +34,15 @@ angular.module('rottenManager.controllers', [])
                 }
                 ms.push({numero: nroMano, cantidad: cant });
             }
-            juego.configuracion.manos = ms;
+            $scope.juego.configuracion.manos = ms;
 
         };
 
         $scope.getMaximo = function(){
-            if(juego.jugadores.length <= 0){
+            if($scope.juego.jugadores.length <= 0){
                 return 0;
             }
-            return Math.floor((juego.configuracion.cantidadMazos * 54) / juego.jugadores.length);
+            return Math.floor(($scope.juego.configuracion.cantidadMazos * 54) / $scope.juego.jugadores.length);
         };
 
 
@@ -84,7 +99,11 @@ angular.module('rottenManager.controllers', [])
     .controller('NewGameCtrl', ['$scope', '$location', 'juego', function ($scope,$location,juego) {
 
         $scope.juego = juego;
-		$scope.juego.reiniciarJuego();
+        $scope.newGame = function(){
+            $scope.juego.reiniciarJuego();
+            $location.path("jugadores")
+        }
+
 		$scope.agregarJugador = function(){
             try {
                 juego.agregarJugador(new Jugador($scope.jugador.nombre));
@@ -108,6 +127,25 @@ angular.module('rottenManager.controllers', [])
     }])
     .controller('FlowCtrl',['$scope', 'juego', '$location', function ($scope,juego,$location) {
         $scope.juego = juego;
+		$scope.modificarBasasAPedir = function(valor,puntaje){
+            puntaje.basasPedidas += valor;
+            if(puntaje.basasPedidas > $scope.getMaximo()){
+                puntaje.basasPedidas = $scope.getMaximo();
+            }
+            if(puntaje.basasPedidas < 0){
+                puntaje.basasPedidas = 0;
+            }
+        };
+		
+		$scope.modificarBasasHechas = function(valor,puntaje){
+            puntaje.basasHechas += valor;
+            if(puntaje.basasHechas > $scope.getMaximo()){
+                puntaje.basasHechas = $scope.getMaximo();
+            }
+            if(puntaje.basasHechas < 0){
+                puntaje.basasHechas = 0;
+            }
+        };
         $scope.iniciarJuego = function(){
             try{
                 $scope.juego.iniciarJuego();
@@ -119,7 +157,7 @@ angular.module('rottenManager.controllers', [])
         };
         $scope.basasHechasValidas = function(){
             var count = 0;
-            for( var idx in $scope.juego.juego.puntajes){
+            for( var idx in $scope.juego.manoActual.puntajes){
                 count += $scope.juego.manoActual.puntajes[idx].basasHechas;
             }
             return count == $scope.getMaximo();
