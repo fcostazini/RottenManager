@@ -20,10 +20,16 @@ Mano.prototype.cerrar = function() {
 }
 
 Mano.prototype.getPuntajeJugador = function(jugador) {
-    var puntaje;
-
-    return puntaje;
+    var encontrado = this.puntajes.filter( function(puntaje,indx){
+        return puntaje.jugador.nombre == jugador.nombre;
+    });
+    if(encontrado.length <= 0){
+        throw new NoExisteElementoExeption(numero);
+    }
+    return encontrado[0];
 }
+
+
 Mano.prototype.agregarPuntaje = function(puntaje){
     this.puntajes.push(puntaje);
 }

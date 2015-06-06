@@ -195,11 +195,17 @@ angular.module('rottenManager.controllers', [])
             }
             $location.path("pedirBasas");
         };
+
         $scope.getPuntajes = function(){
            return $scope.juego.manoActual.puntajes;
        };
+
         $scope.getMaximo = function(){
             return $scope.juego.manoActual.cartas;
+        }
+
+        $scope.getPuntajeJugador = function(jugador){
+            return $scope.juego.manoActual.getgetPuntajeJugador(jugador);
         }
 
     }])

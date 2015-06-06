@@ -49,8 +49,8 @@ Jugador.prototype.quitarPuntaje = function (puntaje) {
 };
 Jugador.prototype.getUltimoPuntaje = function () {
     if (this.puntajes.length > 0) {
-        return this.puntajes[(this.puntajes.length - 1)].puntos;
+        return this.puntajes[(this.puntajes.length - 1)];
     } else {
-        return 0;
+        return null;
     }
 };

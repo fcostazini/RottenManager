@@ -9,7 +9,26 @@
     <ion-content class="has-header has-subheader has-footer">
         <ion-list>
             <ion-item class="item item-button-right" ng-repeat="jugador in getJugadores()">
-                <label>{{jugador.nombre}} : {{jugador.total}}</label>
+                <div class="row center">
+                    <div class="col col-50"><span class="header-totales">{{jugador.nombre}}</span></div>
+                    <div class="col col-50">
+                        <div class="row center">
+                            <div class="col col-25">
+                                <div class="row center">
+                                    <div class="col col-50"><span>P</span></div>
+                                    <div class="col col-50"><span>getPuntajeJugador(jugador).basasPedidas</span>
+                                    </div>
+                                </div>
+                                <div class="row center">
+                                    <div class="col col-50"><span>H</span></div>
+                                    <div class="col col-50"><span>getPuntajeJugador(jugador).basasHechas</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-75"><span class="header-totales">{{jugador.total}}</span></div>
+                        </div>
+                    </div>
+                </div>
             </ion-item>
         </ion-list>
     </ion-content>
@@ -22,3 +41,5 @@
                 class="icon ion-android-exit"></i></button>
     </div>
 </ion-footer-bar>
+
+<label>{{jugador.nombre}} : {{jugador.total}}</label>

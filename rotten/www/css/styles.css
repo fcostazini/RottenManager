@@ -221,9 +221,18 @@ div .menu-content{
     align-items: center;
 }
 
+
+.header-totales{
+    font-size: 1.3rem;
+}
+.totales-subindice{
+    font-size: 1.3rem;
+}
+
 .nombre-jugador{
 	marggin-bottom: -10px;
 	padding-left: 10px;
+    font-size:1.3rem;
 }
 .not-selected{
 	opacity: 0.5;
