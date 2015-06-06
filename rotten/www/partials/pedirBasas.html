@@ -8,8 +8,9 @@
 <ion-view>
     <ion-content class="has-header has-subheader has-footer">
         <ion-list>
-            <ion-item class="item" ng-repeat="puntaje in getPuntajes()">
-				<h3 class="nombre-jugador"><strong>{{puntaje.jugador.nombre}} </strong></h3>
+            <ion-item class="item" ng-class="{'item-repartidor' : $last}" ng-repeat="puntaje in getPuntajes()">
+
+                <h3 class="nombre-jugador"><strong>{{puntaje.jugador.nombre}} </strong></h3>
 					
 				<div class="row center">
 				<span class="col col-50">Basas a Pedir</span>
@@ -19,6 +20,7 @@
 						<button ng-click="modificarBasasAPedir(1,puntaje)" class="button button-clear"><i class="icon ion-ios-arrow-right balanced"></i></button>
 					</div>
 				</div>
+
             </ion-item>
         </ion-list>
     </ion-content>

@@ -124,6 +124,12 @@ angular.module('rottenManager.controllers', [])
     }])
     .controller('FlowCtrl',['$scope', 'juego', '$location', function ($scope,juego,$location) {
         $scope.juego = juego;
+
+        $scope.esJugadorQueReparte = function(jugador){
+            if($scope.juego.repartidor.nombre == jugador.nombre){
+                return true;
+            }
+        }
 		$scope.modificarBasasAPedir = function(valor,puntaje){
             puntaje.basasPedidas += valor;
             if(puntaje.basasPedidas > $scope.getMaximo()){
@@ -205,7 +211,7 @@ angular.module('rottenManager.controllers', [])
         }
 
         $scope.getPuntajeJugador = function(jugador){
-            return $scope.juego.manoActual.getgetPuntajeJugador(jugador);
+            return $scope.juego.manoActual.getPuntajeJugador(jugador);
         }
 
     }])

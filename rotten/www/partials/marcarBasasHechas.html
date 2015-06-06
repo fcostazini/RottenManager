@@ -8,7 +8,7 @@
 <ion-view>
     <ion-content class="has-header has-subheader has-footer" >
         <ion-list>
-            <ion-item class="item" ng-repeat="puntaje in getPuntajes()">	
+            <ion-item class="item" ng-class="{'item-repartidor' : $last}" ng-repeat="puntaje in getPuntajes()">
 				<h3 class="nombre-jugador"><strong>{{puntaje.jugador.nombre}} </strong> - Basas hechas   <strong>{{puntaje.basasPedidas}}</strong></h3>
 				<div class="row center">
 				<span class="col col-50">Basas hechas</span>
