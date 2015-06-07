@@ -29,6 +29,12 @@ Mano.prototype.getPuntajeJugador = function(jugador) {
     return encontrado[0];
 }
 
+Mano.prototype.reordenarJugadores = function(jugador){
+    while(this.puntajes[0].jugador.nombre!=jugador.nombre){
+        this.puntajes.push(this.puntajes.shift());
+    }
+    this.puntajes.push(this.puntajes.shift());
+};
 
 Mano.prototype.agregarPuntaje = function(puntaje){
     this.puntajes.push(puntaje);

@@ -44,7 +44,7 @@ Juego.prototype.iniciarJuego = function(){
     }
     this.iniciado = true;
     this.manoActual = this.manos[0];
-    this.repartidor = this.jugadores[0];
+    this.repartidor = this.jugadores[this.jugadores.length-1];
 
     return this.manoActual;
 };
@@ -84,8 +84,12 @@ Juego.prototype.siguienteMano = function () {
     var posSiguienteMano = -1;
     posSiguienteMano = this.manos.indexOf(this.manoActual)+1;
     if (posSiguienteMano < this.manos.length){
+        this.repartidor = this.manoActual.puntajes[0].jugador;
         this.manoActual = this.manos[posSiguienteMano];
-        this.repartidor = this.getSiguienteJugador();
+
+        this.manoActual.reordenarJugadores(this.repartidor )
+
+
         return this.manoActual;
     }else{
         throw new NoHaySiguienteExeption();
@@ -96,13 +100,7 @@ Juego.prototype.getSiguienteJugador = function(){
     if(!this.iniciado){
         throw new JuegoNoIniciadoException()
     }
-    var pos = this.jugadores.indexOf(this.repartidor);
-    if(pos == (this.jugadores.length-1)){
-        return this.jugadores[0];
-    }else{
-        return  this.jugadores[pos +1];
-    }
-
+   return this.jugadores[0];
 }
 
 Juego.prototype.agregarMano = function(mano){
